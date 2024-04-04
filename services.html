@@ -32,10 +32,13 @@
       .bg {
         background-color: rgb(41, 41, 71);
       }
-    .aa:hover {
-            color: orange;
-        }
-        
+      .aa:hover {
+        color: orange;
+      }
+      .centered {
+        position: absolute;
+        padding: 100px;
+      }
     </style>
   </head>
   <body class="bg-light">
@@ -43,7 +46,14 @@
       <div class="row">
         <div class="col-sm-3">
           <img src="./vita.jpg" width="50%" />
+          <div class="centered">
+            <h5>Services</h5>
+            <a class="nav-link aa" aria-current="page" href="#"
+              ><i class="bi bi-house-door-fill"></i>HOME</a
+            >
+          </div>
         </div>
+
         <div class="col-sm-1"></div>
         <div class="col-sm-6">
           <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -65,12 +75,10 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link  aa" aria-current="page" href="#"
-                      >HOME</a
-                    >
+                    <a class="nav-link aa" aria-current="page" href="#">HOME</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link aa " href="#">SERVICES</a>
+                    <a class="nav-link aa" href="#">SERVICES</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link aa" href="#">DEPARTMENT</a>
