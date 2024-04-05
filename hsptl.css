@@ -1,34 +1,64 @@
-.a{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.a {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+
+
+
+}
+
+.A {
+
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    font-weight: 200;
+}
+
+.B {
+    color: rgb(220, 115, 40);
     font-size: 30px;
 }
-.A{
-   
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   font-size: larger; 
-}
-.B{
-    color:rgb(220, 115, 40);
-    font-size: 30px;
-}
-.button{
+
+.button {
     background-color: rgb(223, 119, 44);
 }
-.C{
-    background-color:azure;
+
+.C {
+    background-color: white;
 }
-.D{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+.D {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 40px;
-    font-weight:200;
+    font-weight: 200;
     padding-right: 40px;
 
 }
-.E{
+
+.E {
     background-color: bisque;
     color: chocolate;
     font-size: larger;
-    
+
 }
 
-
+.F:hover:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.card-title{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+.card-text{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.i1{
+    background-image: url('image12.avif');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 700px;
+            border-radius: 30px;
+}
