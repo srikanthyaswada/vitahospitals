@@ -39,7 +39,6 @@
         position: absolute;
         padding: 100px;
       }
-      
       @media screen and (max-width: 600px) {
         .appointment {
           clear: both;
@@ -53,17 +52,10 @@
   </head>
   <body class="bg-light">
     <div class="container-fluid">
-      <div class="row  bg-white sticky-top">
+      <div class="row bg-white sticky-top">
         <div class="col-sm-3">
           <img src="./vita.jpg" width="50%" />
-          <!-- <div class="centered">
-            <h5>Services</h5>
-            <a class="nav-link aa" aria-current="page" href="#"
-              ><i class="bi bi-house-door-fill"></i>HOME</a
-            >
-          </div> -->
         </div>
-
         <div class="col-sm-1"></div>
         <div class="col-sm-6">
           <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -115,10 +107,18 @@
           <button class="btn btn-dark background">APPOINTMENT</button>
         </div>
       </div>
-
       <div class="row">
         <div class="col-sm-12">
-          <img src="./hospital.webp" width="100%" height="300px" />
+          <div class="centered">
+            <h5>Services</h5>
+            <a class="nav-link aa" aria-current="page" href="#"
+              ><i class="bi bi-house-door-fill"></i>HOME</a
+            >
+          </div>
+          <!-- <img src="./hospital.webp" class="img-fluid" alt="Responsive image" /> -->
+          <div>
+            <img src="./hospital.webp" width="100%" height="300px">
+          </div>
         </div>
       </div>
       <div class="container p-4">
@@ -321,7 +321,6 @@
           <div class="col-sm-3">
             <h3 class="qlinks">Quick links</h3>
             <hr style="color: orange; width: 30%; border-width: 5px" />
-
             <a href="" class="nav-link p-2">Home</a>
             <a href="" class="nav-link p-2">Service</a>
             <a href="" class="nav-link p-2">Department</a>
