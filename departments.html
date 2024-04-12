@@ -31,11 +31,94 @@
         position: absolute;
         padding: 250px;
     }
+    .background:hover {
+        background-color: orange;
+        color:black;
+      }
+      .fa {
+        font-size: xx-large;
+        background-color: darkslategrey;
+        border-radius: 5px;
+        padding: 5px;
+      }
+      .fa:hover {
+        background-color: orange;
+      }
+      .bg {
+        background-color: rgb(41, 41, 71);
+      }
+      .aa:hover {
+        color: orange;
+      }
+     
+      @media screen and (max-width: 600px) {
+        .appointment {
+          clear: both;
+          float: left;
+          margin: 10px auto 5px 20px;
+          width: 28%;
+          display: none;
+        }
+      }
     </style>
 </head>
 
 <body>
-
+    <div class="row bg-white sticky-top">
+        <div class="col-sm-3">
+          <img src="./vita.jpg" width="50%" />
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-6">
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <i class="bi bi-search"></i>
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link aa"
+                      aria-current="page"
+                      href="homepage.html"
+                      >HOME</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link aa" href="">SERVICES</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link aa" href="departments.html"
+                      >DEPARTMENT</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link aa" href="Docters.html">DOCTORS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link aa" href="contacts.html">CONTACT US</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="col-sm-1 mt-2 appointment">
+          <a href="appointment.html"><button class="btn btn-dark  background">APPOINTMENT</button></a>
+        </div>
+      </div>
     <div class="row container-fluid">
         <div class="col-sm-12">
             <img src="hospital-direction.webp" width="100%" height="350px">
@@ -397,6 +480,76 @@
                     <a href="" class="btn">READ MORE</a>
                 </div>
             </div>
+          </div>
+          <div class="container-fluid">
+            <div class="footer">
+              <div class="row bg p-2 text-white">
+                <div class="col-sm-3">
+                  <img src="./vita.jpg" />
+                  <p class="footertext">
+                    With a legacy of over 8 years, we<br />
+                    stand as a trusted name in the <br />
+                    region, offering exceptional medical<br />
+                    services and compassionate care.<br />
+                    Our dedicated team comprises 24<br />
+                    specialized doctors, supported by a<br />
+                    staff of 100+.
+                  </p>
+                  <i class="fa bi bi-facebook"></i>
+                  <i class="fa bi bi-google"></i>
+                  <i class="fa bi bi-instagram"></i>
+                  <i class="fa bi bi-pinterest"></i>
+                </div>
+                <div class="col-sm-3">
+                  <h3 class="qlinks">Quick links</h3>
+                  <hr style="color: orange; width: 30%; border-width: 5px" />
+                  <a href="" class="nav-link p-2">Home</a>
+                  <a href="" class="nav-link p-2">Service</a>
+                  <a href="" class="nav-link p-2">Department</a>
+                  <a href="" class="nav-link p-2">Doctors</a>
+                  <a href="" class="nav-link p-2">Contact Us</a>
+                </div>
+                <div class="col-sm-3">
+                  <h3>Our Departments</h3>
+                  <hr style="color: orange; width: 30%; border-width: 5px" />
+                  <a href="" class="nav-link p-2">ANESTHESIOLOGY</a>
+                  <a href="" class="nav-link p-2">CARDIOLOGY</a>
+                  <a href="" class="nav-link p-2">DENTAL</a>
+                  <a href="" class="nav-link p-2">DERMATOLOGY</a>
+                  <a href="" class="nav-link p-2">ENT</a>
+                  <a href="" class="nav-link p-2">GASTROENTEROLOGIST</a>
+                </div>
+                <div class="col-sm-3">
+                  <h3>Contact Us</h3>
+                  <hr style="color: orange; width: 30%; border-width: 5px" />
+                  <span
+                    ><i class="bi bi-telephone-fill p-2"></i>
+                    +91 91210 00888
+                  </span>
+                  <p>
+                    <span
+                      ><i class="bi bi-envelope p-2"></i> Adarshahospitals@Gmail.Com
+                    </span>
+                  </p>
+                  <p>
+                    <span><i class="bi bi-geo-alt p-2"></i></span>Door No. 2-8-85,
+                    Telangana<br />
+                    Chowk, beside Padmanayaka<br />
+                    Kalyana Mandapam, Jyothinagar,<br />
+                    Karimnagar, Telangana 505001
+                  </p>
+                </div>
+              </div>
+              <div class="row bg">
+                <div class="div">
+                  <hr style="color: cornsilk" />
+                  <p class="text-center text-white">
+                    Copyright 2024 Adarsha Hospitals All Rights Reserved
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 </body>
 
 </html>
