@@ -76,6 +76,39 @@
     .carousel-inner .carousel-item-start {
       transform: translateX(0);
     }
+
+    /* formstyles */
+
+    .form {
+      padding: 80px;
+      background-color: whitesmoke;
+    }
+
+    input {
+      height: 50px;
+      margin-top: 20px;
+    }
+
+    textarea {
+      height: 80px;
+      margin-top: 20px;
+    }
+
+    .formbutton{
+      background-color: orange;
+      color: white;
+      margin-top: 20px;
+    }
+
+  input:hover,textarea:hover{
+    border-color: orange;
+  }
+
+  .formbutton:hover{
+    background-color: black;
+    color: white;
+  }
+
   </style>
 
   <script>
@@ -112,34 +145,20 @@
             <a class="navbar-brand" href="#">
               <i class="bi bi-search"></i>
             </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a
-                    class="nav-link aa"
-                    aria-current="page"
-                    href="homepage.html"
-                    >HOME</a
-                  >
+                  <a class="nav-link aa" aria-current="page" href="homepage.html">HOME</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link aa" href="">SERVICES</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link aa" href="departments.html"
-                    >DEPARTMENT</a
-                  >
+                  <a class="nav-link aa" href="departments.html">DEPARTMENT</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link aa" href="Docters.html">DOCTORS</a>
@@ -375,44 +394,6 @@
       </div>
     </div>
 
-    <!-- form -->
-    <div>
-
-      <form>
-
-        <div class="row g-0 form">
-          <div class="col">
-
-            
-
-            <p style="background-color: rgb(241, 198, 198); width: 150px; padding-left: 15px; color: orange;">GET IN
-              TOUCH</p>
-
-
-            <h1 class="formheading">Get In Touch With Us</h1>
-            <p class="formtext">It is a long established fact that a reader will be distracted by at its
-              layout.<br>Lorem Ipsum is simply
-              dummy text of the printing and typesetting<br>industry fact that a reader.</p>
-
-            <input type="text" class="form-control" placeholder="Full Name">
-            <div class="row g-0">
-              <div class="col">
-                <input type="number" class="form-control" placeholder="Phone">
-              </div>
-              <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              </a>
-              <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
     <div class="row">
       <div class="col-4"></div>
       <div class="col-6 mt-5"><span class="pt-section-sub-title E ms-5 mt-5">Our team</span></div>
@@ -487,80 +468,123 @@
             patients. Here's what some of our satisfied patients have to say about their experience with us:</h5>
         </div>
         <div class="col-sm-5 mt-5" style="background-color: rgb(2, 2, 43);border-radius: 5px;">
-          <h5 class="p-4 text-white" style="font-family:'Courier New', Courier, monospace;">dr.manasa is one of the best doctors we have in karimnagar.she plays very careful attention to our medical
+          <h5 class="p-4 text-white" style="font-family:'Courier New', Courier, monospace;">dr.manasa is one of the best
+            doctors we have in karimnagar.she plays very careful attention to our medical
             needs .She follows up on all our procedures .My husband and I are so grateful for the car we receive</h5>
-            <h4 class="text-white font ms-5">Dr.manasa chenna</h4>
-            <img src="logoadrsha.png" width="40%" height="100px">
+          <h4 class="text-white font ms-5">Dr.manasa chenna</h4>
+          <img src="logoadrsha.png" width="40%" height="100px">
         </div>
       </div>
     </div>
-    <div class="container-fluid mt-5">
-      <div class="footer mt-5">
-        <div class="row bg p-2 text-white">
-          <div class="col-sm-3">
-            <img src="./vita.jpg" />
-            <p class="footertext">
-              With a legacy of over 8 years, we<br />
-              stand as a trusted name in the <br />
-              region, offering exceptional medical<br />
-              services and compassionate care.<br />
-              Our dedicated team comprises 24<br />
-              specialized doctors, supported by a<br />
-              staff of 100+.
-            </p>
-            <i class="fa bi bi-facebook"></i>
-            <i class="fa bi bi-google"></i>
-            <i class="fa bi bi-instagram"></i>
-            <i class="fa bi bi-pinterest"></i>
+    <!-- form -->
+    <div>
+
+      <form>
+
+        <div class="row g-0 form">
+          <div class="col">
+
+
+
+            <p style="background-color: rgb(241, 198, 198); width: 150px; padding-left: 15px; color: orange;">GET IN
+              TOUCH</p>
+
+
+            <h1 class="formheading">Get In Touch With Us</h1>
+            <p class="formtext">It is a long established fact that a reader will be distracted by at its
+              layout.<br>Lorem Ipsum is simply
+              dummy text of the printing and typesetting<br>industry fact that a reader.</p>
+
+            <input type="text" class="form-control" placeholder="Full Name">
+            <div class="row g-0">
+              <div class="col">
+                <input type="number" class="form-control" placeholder="Phone">
+              </div>
+
+              <div class="col ms-1">
+                <input type="email" class="form-control" placeholder="Email">
+              </div>
+
+            </div>
+            <textarea class="form-control" placeholder="Write Your Message"></textarea>
+            <button type="submit" class="btn formbutton">Submit</button>
           </div>
-          <div class="col-sm-3">
-            <h3 class="qlinks">Quick links</h3>
-            <hr style="color: orange; width: 30%; border-width: 5px" />
-            <a href="" class="nav-link p-2">Home</a>
-            <a href="" class="nav-link p-2">Service</a>
-            <a href="" class="nav-link p-2">Department</a>
-            <a href="" class="nav-link p-2">Doctors</a>
-            <a href="" class="nav-link p-2">Contact Us</a>
+          <div class="col-1"></div>
+          <div class="col">
+            <img src="homepageformimage.jpg" height="100%" width="100%">
           </div>
-          <div class="col-sm-3">
-            <h3>Our Departments</h3>
-            <hr style="color: orange; width: 30%; border-width: 5px" />
-            <a href="" class="nav-link p-2">ANESTHESIOLOGY</a>
-            <a href="" class="nav-link p-2">CARDIOLOGY</a>
-            <a href="" class="nav-link p-2">DENTAL</a>
-            <a href="" class="nav-link p-2">DERMATOLOGY</a>
-            <a href="" class="nav-link p-2">ENT</a>
-            <a href="" class="nav-link p-2">GASTROENTEROLOGIST</a>
-          </div>
-          <div class="col-sm-3">
-            <h3>Contact Us</h3>
-            <hr style="color: orange; width: 30%; border-width: 5px" />
-            <span><i class="bi bi-telephone-fill p-2"></i>
-              +91 91210 00888
+        </div>
+    </div>
+
+  </div>
+
+  <div class="container-fluid mt-5">
+    <div class="footer mt-5">
+      <div class="row bg p-2 text-white">
+        <div class="col-sm-3">
+          <img src="./vita.jpg" />
+          <p class="footertext">
+            With a legacy of over 8 years, we<br />
+            stand as a trusted name in the <br />
+            region, offering exceptional medical<br />
+            services and compassionate care.<br />
+            Our dedicated team comprises 24<br />
+            specialized doctors, supported by a<br />
+            staff of 100+.
+          </p>
+          <i class="fa bi bi-facebook"></i>
+          <i class="fa bi bi-google"></i>
+          <i class="fa bi bi-instagram"></i>
+          <i class="fa bi bi-pinterest"></i>
+        </div>
+        <div class="col-sm-3">
+          <h3 class="qlinks">Quick links</h3>
+          <hr style="color: orange; width: 30%; border-width: 5px" />
+          <a href="" class="nav-link p-2">Home</a>
+          <a href="" class="nav-link p-2">Service</a>
+          <a href="" class="nav-link p-2">Department</a>
+          <a href="" class="nav-link p-2">Doctors</a>
+          <a href="" class="nav-link p-2">Contact Us</a>
+        </div>
+        <div class="col-sm-3">
+          <h3>Our Departments</h3>
+          <hr style="color: orange; width: 30%; border-width: 5px" />
+          <a href="" class="nav-link p-2">ANESTHESIOLOGY</a>
+          <a href="" class="nav-link p-2">CARDIOLOGY</a>
+          <a href="" class="nav-link p-2">DENTAL</a>
+          <a href="" class="nav-link p-2">DERMATOLOGY</a>
+          <a href="" class="nav-link p-2">ENT</a>
+          <a href="" class="nav-link p-2">GASTROENTEROLOGIST</a>
+        </div>
+        <div class="col-sm-3">
+          <h3>Contact Us</h3>
+          <hr style="color: orange; width: 30%; border-width: 5px" />
+          <span><i class="bi bi-telephone-fill p-2"></i>
+            +91 91210 00888
+          </span>
+          <p>
+            <span><i class="bi bi-envelope p-2"></i> Adarshahospitals@Gmail.Com
             </span>
-            <p>
-              <span><i class="bi bi-envelope p-2"></i> Adarshahospitals@Gmail.Com
-              </span>
-            </p>
-            <p>
-              <span><i class="bi bi-geo-alt p-2"></i></span>Door No. 2-8-85,
-              Telangana<br />
-              Chowk, beside Padmanayaka<br />
-              Kalyana Mandapam, Jyothinagar,<br />
-              Karimnagar, Telangana 505001
-            </p>
-          </div>
+          </p>
+          <p>
+            <span><i class="bi bi-geo-alt p-2"></i></span>Door No. 2-8-85,
+            Telangana<br />
+            Chowk, beside Padmanayaka<br />
+            Kalyana Mandapam, Jyothinagar,<br />
+            Karimnagar, Telangana 505001
+          </p>
         </div>
-        <div class="row bg">
-          <div class="div">
-            <hr style="color: cornsilk" />
-            <p class="text-center text-white">
-              Copyright 2024 Adarsha Hospitals All Rights Reserved
-            </p>
-          </div>
+      </div>
+      <div class="row bg">
+        <div class="div">
+          <hr style="color: cornsilk" />
+          <p class="text-center text-white">
+            Copyright 2024 Adarsha Hospitals All Rights Reserved
+          </p>
         </div>
       </div>
     </div>
+  </div>
 
 
 </body>
