@@ -58,14 +58,14 @@
     background-image: url('image12.avif');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: 700px;
+    height: 640px;
+    width:100%;
     border-radius: 30px;
 }
 
 h1 {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 45px !important;
+    font-size: 50px !important;
     font-weight: 800 !important;
 }
 
@@ -111,3 +111,12 @@ h2 {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
+.cb:hover{
+    background-color:chocolate;
+        transition: 1s;
+        color:aliceblue;
+
+}
+
+  
+ 

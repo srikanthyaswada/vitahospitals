@@ -9,42 +9,94 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
- <style>
-  body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  .background:hover {
-    background-color: orange;
-  }
-  .fa {
-    font-size: xx-large;
-    background-color: darkslategrey;
-    border-radius: 5px;
-    padding: 5px;
-  }
-  .fa:hover {
-    background-color: orange;
-  }
-  .bg {
-    background-color: rgb(41, 41, 71);
-  }
-  .aa:hover {
-    color: orange;
-  }
-  .centered {
-    position: absolute;
-    padding: 100px;
-  }
-  @media screen and (max-width: 600px) {
-    .appointment {
-      clear: both;
-      float: left;
-      margin: 10px auto 5px 20px;
-      width: 28%;
-      display: none;
+  <style>
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
-  }
-</style>
+
+    .background:hover {
+      background-color: orange;
+    }
+
+    .fa {
+      font-size: xx-large;
+      background-color: darkslategrey;
+      border-radius: 5px;
+      padding: 5px;
+    }
+
+    .fa:hover {
+      background-color: orange;
+    }
+
+    .bg {
+      background-color: rgb(41, 41, 71);
+    }
+
+    .aa:hover {
+      color: orange;
+    }
+
+    .centered {
+      position: absolute;
+      padding: 100px;
+    }
+
+    @media (max-width: 767px) {
+      .carousel-inner .carousel-item>div {
+        display: none;
+      }
+
+      .carousel-inner .carousel-item>div:first-child {
+        display: block;
+      }
+    }
+
+    .carousel-inner .carousel-item.active,
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+      display: flex;
+    }
+
+    /* medium and up screens */
+    @media (min-width: 768px) {
+
+      .carousel-inner .carousel-item-end.active,
+      .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+      }
+
+      .carousel-inner .carousel-item-start.active,
+      .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+      }
+    }
+
+    .carousel-inner .carousel-item-end,
+    .carousel-inner .carousel-item-start {
+      transform: translateX(0);
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let items = document.querySelectorAll('.carousel .carousel-item')
+
+      items.forEach((el) => {
+        const minPerSlide = 4
+        let next = el.nextElementSibling
+        for (var i = 1; i < minPerSlide; i++) {
+          if (!next) {
+            // wrap carousel by using first child
+            next = items[0]
+          }
+          let cloneChild = next.querySelector('.card').cloneNode(true)
+          el.appendChild(cloneChild)
+          next = next.nextElementSibling
+        }
+      })
+    });
+  </script>
 </head>
 
 <body>
@@ -60,34 +112,20 @@
             <a class="navbar-brand" href="#">
               <i class="bi bi-search"></i>
             </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a
-                    class="nav-link aa"
-                    aria-current="page"
-                    href="homepage.html"
-                    >HOME</a
-                  >
+                  <a class="nav-link aa" aria-current="page" href="homepage.html">HOME</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link aa" href="./services.html">SERVICES</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link aa" href="departments.html"
-                    >DEPARTMENT</a
-                  >
+                  <a class="nav-link aa" href="departments.html">DEPARTMENT</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link aa" href="Docters.html">DOCTORS</a>
@@ -131,7 +169,7 @@
     </div>
     <div class="row">
       <div class="col-sm-6">
-        <img src="image3.png"  width="100%" height="700">
+        <img src="image3.png" width="100%" height="700">
       </div>
       <div class="col-sm-6">
         <div class="pt-section pt-style-1 text-left mt-5">
@@ -183,7 +221,7 @@
       </div>
 
     </div>
-    <div class="row mt-5">
+    <div class="row mt-5 g-0">
       <div class="col-sm-1"></div>
       <div class="col-sm-3">
         <div class="card  F shadow" style="width: 23rem;">
@@ -222,7 +260,7 @@
         </div>
       </div>
     </div>
-    <div class="row mt-5">
+    <div class="row mt-5 g-0">
       <div class="col-sm-1"></div>
       <div class="col-sm-3">
         <div class="card  F shadow" style="width: 23rem;">
@@ -263,25 +301,236 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row g-0">
       <div class="col-sm-3  mt-5 m-auto">
         <button type="button" class="btn btn  btn-lg mt-4  text-white" style="background-color: rgb(206, 108, 38);"><a
             class="nav-link" style="font-family:serif;">VIEW ALL
             DEPARTMENTS</a></button>
 
       </div>
-      <div class="row i1 mt-5">
-        
-      <div class="col-sm-3 m-auto">
-        <div class="pt-section pt-style-1  mt-5">
-          <span class="pt-section-sub-title E">Our Departments</span>
-          <h1 class="pt-2  text-white">Explore Our Main Departments</h1>
+    </div>
+    <div class="container">
+      <div class="row i1 mt-5 g-0">
+        <div class="col-sm-5"></div>
+        <div class="col-sm-7 m-auto">
+          <div class="pt-section pt-style-1">
+            <span class="pt-section-sub-title E ms-5">What about us</span>
+            <h1 class="pt-2  text-white">Take The First Step Towards Better Health Today!</h1>
+            <p class="text-white"
+              style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 30px;">
+              Schedule your appointment at Adarsha Multispeciality Hospital and experience the difference in
+              healthcare. Whether you need routine check-ups, specialized treatments, or expert consultations, our
+              dedicated team is here to provide personalized care tailored to your needs.
+
+            </p>
+            <button type="button" class="btn btn  btn-lg mt-4  text-white"
+              style="background-color: rgb(206, 108, 38);"><a class="nav-link" style="font-family:serif;">Get In Touch
+              </a></button>
+
+          </div>
+        </div>
+        <div class="row g-0 mt-3">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-10 bg-white shadow" style="height:120px;border-radius: 20px;">
+            <div class="row">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-2 mt-2">
+                <h1 style="color: rgb(5, 5, 72);">8+</h1>
+                <h6 style="color: rgb(5, 5, 72);">EXPERIENCE IN YEARS</h6>
+              </div>
+              <div class="col-sm-1"></div>
+              <div class="col-sm-2 mt-2">
+                <h1 style="color: rgb(5, 5, 72);">24+</h1>
+                <h6 style="color: rgb(5, 5, 103);">EXPERT DOCTORS</h6>
+              </div>
+              <div class="col-sm-1"></div>
+              <div class="col-sm-2 mt-2">
+                <h1 style="color: rgb(5, 5, 72);">685k</h1>
+                <h6 style="color: rgb(5, 5, 72);">SAVED</h6>
+              </div>
+              <div class="col-sm-1"></div>
+              <div class="col-sm-2 mt-2">
+                <h1 style="color: rgb(5, 5, 72);">500k</h1>
+                <h6 style="color: rgb(5, 5, 72);">HAPPY PATIENTS</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-4"></div>
+        <div class="col-6 mt-5"><span class="pt-section-sub-title E ms-5 mt-5">Our partners</span></div>
+      </div>
+      <div class="row">
+        <div class="col-4"></div>
+        <div class="col-6">
+          <h1 style="font-family: 'Courier New', Courier, monospace;">Our Partners</h1>
+        </div>
+        <div class="container text-center my-3">
+          <div class="row mx-auto my-auto justify-content-center">
+            <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="https://via.placeholder.com/700x500.png/CB997E/333333?text=1" class="img-fluid">
+                      </div>
+                      <div class="card-img-overlay">Slide 1</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="https://via.placeholder.com/700x500.png/DDBEA9/333333?text=2" class="img-fluid">
+                      </div>
+                      <div class="card-img-overlay">Slide 2</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="https://via.placeholder.com/700x500.png/FFE8D6/333333?text=3" class="img-fluid">
+                      </div>
+                      <div class="card-img-overlay">Slide 3</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="https://via.placeholder.com/700x500.png/B7B7A4/333333?text=4" class="img-fluid">
+                      </div>
+                      <div class="card-img-overlay">Slide 4</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="https://via.placeholder.com/700x500.png/A5A58D/333333?text=5" class="img-fluid">
+                      </div>
+                      <div class="card-img-overlay">Slide 5</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="col-md-3">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="https://via.placeholder.com/700x500.png/6B705C/eeeeee?text=6" class="img-fluid">
+                      </div>
+                      <div class="card-img-overlay">Slide 6</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </a>
+              <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-     
+
     </div>
-    <div class="container-fluid">
-      <div class="footer">
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-6 mt-5"><span class="pt-section-sub-title E ms-5 mt-5">Our team</span></div>
+    </div>
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <h1 style="font-family: 'Courier New', Courier, monospace;">Meet the perfect Team </h1>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <!-- <div class="col-sm-3 ms-5 container">
+        <img src="image13.jpg" width="380px"  class=" shadow i2">
+        <div class="overlay">Dr. Kariveda Sathyanarayana Reddy
+          ORTHOPEDIC</div>
+      </div> -->
+      <div class="col-sm-4">
+        <div class="card ms-5  shadow" style="width: 23rem;">
+          <img src="image13.jpg" alt="Card image cap">
+          <div class="card-body cb">
+            <h5 class="card-title ms-3">Dr. Kariveda Sathyanarayana Reddy</h5>
+            <p class="ms-5" style="color:orange">ORTHOPEDICS
+            </p>
+            <div class="overlay">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col-sm-3 ms-5 container">
+        <img src="image14.jpg" width="380px" class=" shadow i2">
+        <div class="overlay"></div>
+      </div> -->
+      <div class="col-sm-4">
+        <div class="card ms-2  shadow" style="width: 23rem;">
+          <img src="image14.jpg" alt="Card image cap">
+          <div class="card-body cb">
+            <h5 class="card-title ms-3">DR.HARI KRISHNA
+            </h5>
+            <p class="ms-5" style="color:orange">NEUROLOGY</p>
+            <div class="overlay">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col-sm-3 ms-5 container">
+        <img src="image15.jpg" width="380px" class=" shadow i2">
+        <div class="overlay"></div>
+      </div> -->
+      <div class="col-sm-4">
+        <div class="card shadow" style="width:23rem;">
+          <img src="image15.jpg" alt="Card image cap">
+          <div class="car-body cb">
+            <h5 class="card-title ms-3 mt-5">DR. ADEPU MANASA</h5>
+            <p class="ms-5" style="color:orange">OBSTETRICS AND GYNECOLOGY
+            </p>
+            <div class="overlay">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-1" style="background-color:rgb(216, 132, 37);border-radius: 3px;"></div>
+        <div class="col-sm-5" style="background-color: chocolate;height: 400px;">
+          <span class="pt-section-sub-title E ">Our team</span>
+          <h1 class="mt-3 text-white" style="font-family:'Courier New', Courier, monospace;">Our Happy Clients Say About
+            Us</h1>
+          <h5 class="text-white" style="font-family: monospace;">At Adarsha Multispeciality Hospital, we take pride in
+            providing exceptional healthcare services to our
+            patients. Here's what some of our satisfied patients have to say about their experience with us:</h5>
+        </div>
+        <div class="col-sm-5 mt-5" style="background-color: rgb(2, 2, 43);border-radius: 5px;">
+          <h5 class="p-4 text-white" style="font-family:'Courier New', Courier, monospace;">dr.manasa is one of the best doctors we have in karimnagar.she plays very careful attention to our medical
+            needs .She follows up on all our procedures .My husband and I are so grateful for the car we receive</h5>
+            <h4 class="text-white font ms-5">Dr.manasa chenna</h4>
+            <img src="logoadrsha.png" width="40%" height="100px">
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt-5">
+      <div class="footer mt-5">
         <div class="row bg p-2 text-white">
           <div class="col-sm-3">
             <img src="./vita.jpg" />
@@ -321,13 +570,11 @@
           <div class="col-sm-3">
             <h3>Contact Us</h3>
             <hr style="color: orange; width: 30%; border-width: 5px" />
-            <span
-              ><i class="bi bi-telephone-fill p-2"></i>
+            <span><i class="bi bi-telephone-fill p-2"></i>
               +91 91210 00888
             </span>
             <p>
-              <span
-                ><i class="bi bi-envelope p-2"></i> Adarshahospitals@Gmail.Com
+              <span><i class="bi bi-envelope p-2"></i> Adarshahospitals@Gmail.Com
               </span>
             </p>
             <p>
@@ -349,6 +596,8 @@
         </div>
       </div>
     </div>
+
+
 </body>
 
 </html>
