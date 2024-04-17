@@ -1,14 +1,11 @@
-.a {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: large;
-
-
-
+.a:hover {
+    color: orange !important;
 }
+
 
 .A {
 
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: larger;
     font-weight: 200;
 }
@@ -46,19 +43,80 @@
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
-.card-title{
+
+.card-title {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 30px;
     letter-spacing: 1px;
 }
-.card-text{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+.card-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.i1{
+
+.i1 {
     background-image: url('image12.avif');
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 100%;
-            height: 700px;
-            border-radius: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 640px;
+    width:100%;
+    border-radius: 30px;
 }
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px !important;
+    font-weight: 800 !important;
+}
+
+.paragraph {
+    font-family: monospace;
+    font-size: 20px;
+
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 530 !important;
+    font-size: 35px !important;
+}
+
+.i2 {
+    display: block;
+    height: auto;
+}
+
+.overlay {
+    background:orange;
+    color: #f1f1f1;
+    width: 380px;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 40px;
+    padding: 20px;
+    text-align: center;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.container {
+    position: relative;
+    max-width: 380px;
+}
+.over:hover{
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.cb:hover{
+    background-color:chocolate;
+        transition: 1s;
+        color:aliceblue;
+
+}
+
+  
+ 
